@@ -1,13 +1,12 @@
 :root{
     --color-azulado: #518edd62;
 }
-.contenido-cabecera{
+/*.contenido-cabecera{
 border-bottom-left-radius: 30px;
 border-top-left-radius: 30px;
 border-top-right-radius: 30px;
 border-bottom-right-radius: 30px;
-}
-
+}*/
 body {
   font-family: "Nunito", sans-serif;
 }
