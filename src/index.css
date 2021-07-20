@@ -88,3 +88,11 @@ nav .navbar {
     display: none;
   }
 }
+.footer{
+  background-color: #f8f9fa;
+  bottom: 1px;
+  height: 60px;
+  width: 100%;
+  color: black;
+  position: absolute;
+}
