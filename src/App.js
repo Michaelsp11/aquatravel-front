@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Redirect, Route, Switch, } from "react-router-dom";
 import { FaMinusCircle } from "react-icons/fa";
 import { Cabecera } from "./componentes/Cabecera";
 import { FormularioLogin } from "./componentes/FormularioLogin";
@@ -9,13 +10,13 @@ function App() {
       <Cabecera/>
       <Switch>
         <Route path="/inicio" exact>
-          <Inicial />
+          {/* <Inicial /> */}
         </Route>
         <Route path="/lista" exact>
-          <Lista datos={datos} />
+          {/* <Lista/> */}
         </Route>
         <Route path="/login" exact>
-          <Login error={error} loguearse={loguearse} />
+          <FormularioLogin />
         </Route>
         <Route path="/" exact>
           <Redirect to="/inicio" />
