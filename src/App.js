@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Redirect, Route, Switch, } from "react-router-dom";
 import { FaMinusCircle } from "react-icons/fa";
 import { Cabecera } from "./componentes/Cabecera";
-import { FormularioLogin } from "./componentes/FormularioLogin";
 
 
 function App() {
   return (
+
     <Router>
       <Cabecera/>
       <Switch>
@@ -26,7 +26,9 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    <Footer />
+
   );
- 
 }
+
 export default App;
