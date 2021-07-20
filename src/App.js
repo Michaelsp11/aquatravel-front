@@ -2,10 +2,8 @@ import { BrowserRouter as Router, Redirect, Route, Switch, } from "react-router-
 import { FaMinusCircle } from "react-icons/fa";
 import { Cabecera } from "./componentes/Cabecera";
 
-
 function App() {
   return (
-
     <Router>
       <Cabecera/>
       <Switch>
@@ -27,7 +25,6 @@ function App() {
       </Switch>
     </Router>
     <Footer />
-
   );
 }
 
