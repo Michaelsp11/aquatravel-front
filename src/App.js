@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Redirect, Route, Switch, } from "react-router-
 import { FaMinusCircle } from "react-icons/fa";
 import { Cabecera } from "./componentes/Cabecera";
 import { Footer } from "./componentes/Footer";
+import { FormularioLogin } from "./componentes/FormularioLogin";
+
 
 function App() {
   return (
@@ -23,10 +25,10 @@ function App() {
         <Route path="**" exact>
           <Redirect to="/inicio" />
         </Route>
-      </Switch>   
+      </Switch>
       <Footer />
     </Router>
- 
+
   );
 }
 
