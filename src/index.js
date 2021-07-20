@@ -6,7 +6,6 @@ import "./formulario.css";
 import App from "./App";
 import { FaMinusCircle } from "react-icons/fa";
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
