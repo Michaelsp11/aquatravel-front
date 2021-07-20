@@ -25,19 +25,18 @@ export const Cabecera = () => {
               </button>
             </div>
             <div
-              className={`navbar-items${
-                showItems ? " show " : " "
-              }col-4 col-sm-2`}
+              className={`navbar-items${showItems ? " show " : " "
+                }col-4 col-sm-2`}
             >
               <ul className="list-unstyled text-right">
                 <li className="">
-                  <a href="login">Login</a>
+                  <a href="src\pages\Login.js">Login</a>
                 </li>
                 <li className="">
-                  <a href="registrarme">Registrar</a>
+                  <a href="src\pages\Registrar.js">Registrar</a>
                 </li>
                 <li className="">
-                  <a href="salir">Logout</a>
+                  <a href="src\pages\Logout.js">Logout</a>
                 </li>
               </ul>
             </div>
