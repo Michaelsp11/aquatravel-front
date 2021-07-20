@@ -43,3 +43,41 @@ body {
 .nav-items-oculta {
   display: none;
 }
+
+.boton{
+    border: 3px solid var(--color-azulado);
+    color: var(--color-azulado);
+    height: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    background-color: white;
+}
+
+.botonbuscar{
+    width: 110px;
+    height: 60px;
+    color: black;
+    font-size: 25px ;
+}
+
+.boton:hover {
+  background-color: var(--color-azulado);
+}
+.item-list {
+  font-size: 18px;
+  margin-left: 25px;
+}
+nav .navbar{
+  background-color: white;
+}
+@media(min-width:650px){
+.contenido-principal{
+    margin: 0 auto;
+    padding: 25px;
+    justify-content: center;
+}
+.burguer-menu{
+  display: none;
+}
+}
+

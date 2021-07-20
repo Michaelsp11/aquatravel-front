@@ -1,4 +1,5 @@
 export const Cabecera = () => {
+
   return (
     <>
       <header className="cabecera bg-white py-2">
