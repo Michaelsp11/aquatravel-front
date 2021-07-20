@@ -8,6 +8,7 @@ import { FaMinusCircle } from "react-icons/fa";
 import { Cabecera } from "./componentes/Cabecera";
 import { Footer } from "./componentes/Footer";
 import { Inicial } from "./pages/Inicial";
+import { FormularioLogin } from "./componentes/FormularioLogin";
 function App() {
   return (
     <Router>
