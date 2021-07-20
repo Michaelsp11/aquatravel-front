@@ -39,10 +39,13 @@ body {
 nav .navbar{
   background-color: white;
 }
-@media(max-width:650px){
+@media(min-width:650px){
 .contenido-principal{
     margin: 0 auto;
     padding: 25px;
     justify-content: center;
+}
+.burguer-menu{
+  display: none;
 }
 }

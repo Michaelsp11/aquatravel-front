@@ -1,12 +1,25 @@
 export const Cabecera = () => {
     return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="HOLI">Navbar
+        <a className="navbar-brand" href="HOLI">
           <img className="logo" alt="logo pagina" src="./aquaTravel.png" width="80" height="80" />
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
+
+
+        <div className="burguer-menu">
+          <div className="menu-colapsable" id="navbarToggleExternalContent">
+             <div className="bg-light p-4">
+              <h4 className="text-dark">Menú</h4>
+              <span className="text-white">texto que sale cuando le doy al burguer menu.</span>
+            </div>
+          </div>
+          <nav className="navbar navbar-dark bg-dark">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
