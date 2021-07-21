@@ -5,14 +5,15 @@ import { AuthContext } from "../contextos/AuthContext";
 export const Registrar = () => {
   const history = useHistory();
   const { loguearUsuario } = useContext(AuthContext);
-  const [datosLogin, setDatosLogin] = useState({
+  const [datosRegistro, setDatosRegistro] = useState({
     usuario: "",
-    contraseña: "",
+    contrasenya: "",
+    email: "",
   });
   const [error, setError] = useState(false);
   const setDatos = (e) => {
-    setDatosLogin({
-      ...datosLogin,
+    setDatosRegistro({
+      ...datosRegistro,
       [e.target.id]: e.target.value,
     });
   };
@@ -20,13 +21,16 @@ export const Registrar = () => {
   //REACT_APP_URL_API AÑADIR .ENV
   const enviarFormulario = async (e) => {
     e.preventDefault();
-    const resp = await fetch(process.env.REACT_APP_URL_API + "usuarios/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(datosLogin),
-    });
+    const resp = await fetch(
+      process.env.REACT_APP_URL_API + "usuarios/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datosRegistro),
+      }
+    );
     if (!resp.ok) {
       setError(true);
       return;
@@ -53,17 +57,19 @@ export const Registrar = () => {
         <form className="form-login" onSubmit={enviarFormulario}>
           <input
             type="text"
-            id="login"
+            id="usuario"
             className="fadeIn second"
-            name="login"
             placeholder="Usuario"
+            value={datosRegistro.usuario}
+            onChange={setDatos}
           ></input>
           <input
             type="password"
-            id="password"
+            id="contrasenya"
             className="fadeIn third"
-            name="password"
             placeholder="Contraseña"
+            value={datosRegistro.contrasenya}
+            onChange={setDatos}
           ></input>
           <input
             type="text"
@@ -71,8 +77,15 @@ export const Registrar = () => {
             className="fadeIn fourth"
             name="email"
             placeholder="Email"
+            value={datosRegistro.email}
+            onChange={setDatos}
           ></input>
-          <input type="submit" className="fadeIn five" value="LogIn"></input>
+          {error && (
+            <p className="text-danger">Fallo al registrar el usuario!</p>
+          )}
+          <button type="submit" className="btn btn-submit w-100">
+            Registrar
+          </button>
         </form>
       </div>
     </div>

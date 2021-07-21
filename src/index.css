@@ -28,10 +28,14 @@ body {
   background-image: none;
   border-color: var(--color-principal);
 }
-.btn-nav:hover {
+.btn-nav:hover,
+.btn-submit {
   color: #fff;
   background-color: var(--color-principal);
   border-color: var(--color-principal);
+}
+.btn-submit {
+  margin-top: 32px;
 }
 .boton {
   border: 3px solid var(--color-azulado);
