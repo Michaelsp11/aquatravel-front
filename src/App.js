@@ -9,6 +9,7 @@ import { Footer } from "./componentes/Footer";
 import { Inicial } from "./pages/Inicial";
 import { RutaProtegida } from "./componentes/RutaProtegida";
 import { Login } from "./pages/Login";
+import { Registrar } from "./pages/Registrar";
 import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
@@ -31,6 +32,9 @@ function App() {
             <RutaProtegida>
               <Logout />
             </RutaProtegida>
+          </Route>
+          <Route path="/register" exact>
+            <Registrar />
           </Route>
           <Route path="/" exact>
             <Redirect to="/inicio" />

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../contextos/AuthContext";
-
+import { NavLink } from "react-router-dom";
 export const Login = () => {
   const history = useHistory();
   const { loguearUsuario } = useContext(AuthContext);
@@ -38,9 +38,9 @@ export const Login = () => {
     history.push("/inicio");
   };
   return (
-    <div className="contenedor-formulario">
-      <div className="Contenido">
-        <div className="contenedor-imagen">
+    <div className="container">
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center py-5">
           <img
             className="imagen"
             src="aquaTravel.png"
@@ -50,7 +50,7 @@ export const Login = () => {
             height="80"
           />
         </div>
-        <form onSubmit={enviarFormulario}>
+        <form className="form-login" onSubmit={enviarFormulario}>
           <input
             type="text"
             id="login"
@@ -74,6 +74,18 @@ export const Login = () => {
           ></input>
           <input type="submit" className="fadeIn five" value="LogIn"></input>
         </form>
+      </div>
+      <div className="row justify-content-center py-3">
+        <div className="col-12 text-center">
+          <span className="pr-1">¿Aún no estas registrado?</span>
+          <NavLink
+            to="/register"
+            className="link-page color-page"
+            activeClassName="actual"
+          >
+            Registrate
+          </NavLink>
+        </div>
       </div>
     </div>
   );
