@@ -65,13 +65,6 @@ export const Login = () => {
             name="password"
             placeholder="Contraseña"
           ></input>
-          <input
-            type="text"
-            id="email"
-            className="fadeIn fourth"
-            name="email"
-            placeholder="Email"
-          ></input>
           <input type="submit" className="fadeIn five" value="LogIn"></input>
         </form>
       </div>
