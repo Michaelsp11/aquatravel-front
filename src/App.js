@@ -9,6 +9,7 @@ import { Cabecera } from "./componentes/Cabecera";
 import { Footer } from "./componentes/Footer";
 import { Inicial } from "./pages/Inicial";
 import { FormularioLogin } from "./componentes/FormularioLogin";
+import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 function App() {
   return (
     <Router>
@@ -27,7 +28,7 @@ function App() {
           <Redirect to="/inicio" />
         </Route>
         <Route path="**" exact>
-          <Redirect to="/inicio" />
+          <PaginaNoEncontrada />
         </Route>
       </Switch>
       <Footer />
