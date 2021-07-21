@@ -1,5 +1,4 @@
 export const Footer = () => {
-
     return (
         <>
             <footer class="page-footer footer font-small pt-4">

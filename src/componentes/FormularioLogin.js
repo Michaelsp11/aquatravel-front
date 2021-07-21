@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import {useHistory} from "react-router-dom";
-import { AuthContext } from "./contextos/AuthContext";
+import { AuthContext } from "../componentes/contextos/AuthContext";
 
 export const FormularioLogin =() => {
   const history = useHistory();
@@ -47,8 +47,8 @@ export const FormularioLogin =() => {
               <form>
                 <input type="text" id="login" className="fadeIn second" name="login" placeholder="Usuario"></input>
                 <input type="password" id="password" className="fadeIn third" name="password" placeholder="Contraseña"></input>
-                <input type="text" id="email" className="fadeIn fourth" name="email" placeholder="Email"></input>
                 <input type="submit" className="fadeIn five" value="LogIn"></input>
+
               </form>
         </div>
      </div>
