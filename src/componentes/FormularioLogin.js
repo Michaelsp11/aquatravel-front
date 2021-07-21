@@ -48,7 +48,6 @@ export const FormularioLogin =() => {
                 <input type="text" id="login" className="fadeIn second" name="login" placeholder="Usuario"></input>
                 <input type="password" id="password" className="fadeIn third" name="password" placeholder="Contraseña"></input>
                 <input type="submit" className="fadeIn five" value="LogIn"></input>
-
               </form>
         </div>
      </div>
