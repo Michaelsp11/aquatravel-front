@@ -82,6 +82,9 @@ nav .navbar {
   height: 80vh;
   z-index: -1;
 }
+.row-notfound {
+  height: 80vh;
+}
 @media (min-width: 650px) {
   .contenido-principal {
     margin: 0 auto;
