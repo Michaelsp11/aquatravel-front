@@ -1,52 +1,52 @@
-*{box-sizing:border-box;}
+* {
+  box-sizing: border-box;
+}
 
-:root{
+:root {
   --color-border: #21b6a8;
 }
-form{
-	width:300px;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
+.form-login {
+  width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #ccc;
   border: 1px solid var(--color-border);
 }
-form input{
-	width:180px;
-	padding:10px 20px;
-	border:1px solid var(--color-border);
-	border-radius:5px;
-	border:1px solid var(--color-border);
-	margin:5px 0;
-	display:inline-block;
+.form-login input {
+  width: 180px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  margin: 5px 0;
+  display: inline-block;
 }
-form input[type="text"]{
+.form-login input[type="text"] {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-form input[type="password"]{
+.form-login input[type="password"] {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
-	margin-top:32px;
-	border-radius:5px;
-	display:block;
-	color:black;
-	background-color:rgb(17, 231, 213,0.2);
+.form-login input[type="submit"] {
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border-radius: 5px;
+  display: block;
+  color: black;
+  background-color: rgb(17, 231, 213, 0.2);
 }
-form input[type="submit"]:hover{
-  border:1px solid var(--color-border);
+.form-login input[type="submit"]:hover {
+  border: 1px solid var(--color-border);
   box-shadow: 1px 1px 10px 5px var(--color-border);
 }
-.contenedor-imagen{
+.contenedor-imagen {
   display: flex;
   justify-content: center;
-  margin:50px;
+  margin: 50px;
 }
-
-
