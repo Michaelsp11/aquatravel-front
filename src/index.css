@@ -78,6 +78,10 @@ body {
 nav .navbar {
   background-color: white;
 }
+.mapa .leaflet-container {
+  height: 80vh;
+  z-index: -1;
+}
 @media (min-width: 650px) {
   .contenido-principal {
     margin: 0 auto;
@@ -88,7 +92,7 @@ nav .navbar {
     display: none;
   }
 }
-.footer{
+.footer {
   background-color: #f8f9fa;
   bottom: 1px;
   height: 60px;
