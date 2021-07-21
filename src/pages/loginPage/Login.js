@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { AuthContext } from "../contextos/AuthContext";
+import { AuthContext } from "../../contextos/AuthContext";
 import { NavLink } from "react-router-dom";
 export const Login = () => {
   const history = useHistory();

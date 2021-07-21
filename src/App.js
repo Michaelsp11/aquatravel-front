@@ -8,7 +8,7 @@ import { Cabecera } from "./componentes/Cabecera";
 import { Footer } from "./componentes/Footer";
 import { Inicial } from "./pages/Inicial";
 import { RutaProtegida } from "./componentes/RutaProtegida";
-import { Login } from "./pages/Login";
+import { Login } from "./pages/loginPage/Login";
 import { Registrar } from "./pages/Registrar";
 import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
