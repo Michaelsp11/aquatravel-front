@@ -5,12 +5,6 @@ import { AuthContext } from "./AuthContext";
 export const AuthContextProvider = (props) => {
   const token = localStorage.getItem("token");
   const [logueado, setLogueado] = useState(!!token);
-  const history = useHistory();
-  useEffect(() => {
-    if (!token) {
-      history.push("/login");
-    }
-  }, [token, history]);
   const { children } = props;
   const loguearUsuario = () => {
     setLogueado(true);

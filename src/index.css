@@ -10,47 +10,15 @@ body {
   z-index: 2;
 }
 .btn-nav {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-}
-.nav-line-btn {
-  width: 100%;
-  height: 2px;
-  border-radius: 4px;
-  display: block;
-  position: absolute;
-  left: 0;
-  background: var(--color-principal);
-  transition: all 0.25s ease;
-  transform-origin: 0px 100%;
-}
-.nav-line-btn:nth-child(1) {
-  top: 10%;
-}
-.nav-line-btn:nth-child(2) {
-  top: 50%;
-}
-.nav-line-btn:nth-child(3) {
-  bottom: 10%;
-}
-.navbar-items {
-  display: none;
-  position: absolute;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  top: 110%;
-  right: 0;
-  background-color: #fff;
-  transition: all 0.5s;
-}
-.navbar-items.show {
-  display: block;
-}
-.navbar-items a {
-  text-decoration: none;
   color: var(--color-principal);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--color-principal);
+}
+.btn-nav:hover {
+  color: #fff;
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
 }
 .boton {
   border: 3px solid var(--color-azulado);
@@ -80,7 +48,6 @@ nav .navbar {
 }
 .mapa .leaflet-container {
   height: 80vh;
-  z-index: -1;
 }
 .row-notfound {
   height: 80vh;
@@ -90,9 +57,6 @@ nav .navbar {
     margin: 0 auto;
     padding: 25px;
     justify-content: center;
-  }
-  .burguer-menu {
-    display: none;
   }
 }
 .footer {
