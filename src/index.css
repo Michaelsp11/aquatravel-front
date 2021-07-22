@@ -3,6 +3,8 @@
   --color-principal: #21b6a8;
   --altura-cabecera-pie-xs: 60px;
   --altura-cabecera-pie-md: 75px;
+  --color-blanco: #fff;
+  --color-negro: #000;
 }
 body {
   font-family: "Nunito", sans-serif;
@@ -30,7 +32,7 @@ body {
 }
 .btn-nav:hover,
 .btn-submit {
-  color: #fff;
+  color: var(--color-blanco);
   background-color: var(--color-principal);
   border-color: var(--color-principal);
 }
@@ -43,13 +45,13 @@ body {
   height: 50px;
   font-size: 30px;
   font-weight: 300;
-  background-color: white;
+  background-color: var(--color-blanco);
 }
 
 .botonbuscar {
   width: 110px;
   height: 60px;
-  color: black;
+  color: var(--color-negro);
   font-size: 25px;
 }
 
@@ -67,11 +69,13 @@ body {
   height: 80vh;
 }
 .footer {
-  background-color: #f8f9fa;
+  background-color: var(--color-blanco);
+  box-shadow: 4px 0px 15px 2px rgb(0 0 0 / 4%);
   bottom: 1px;
   height: 60px;
   width: 100%;
-  color: black;
+  color: var(--color-negro);
   position: absolute;
   border-top: 1px solid var(--color-principal);
+
 }

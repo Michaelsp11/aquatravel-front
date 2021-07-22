@@ -13,6 +13,7 @@ import { Registrar } from "./pages/Registrar";
 import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
+import { FormularioPlayas } from "./componentes/FormularioPlayas";
 function App() {
   return (
     <Router>
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/" exact>
             <Redirect to="/inicio" />
+          </Route>
+          <Route path="/formularioPlaya" exact>
+            <Registrar />
           </Route>
           <Route path="**" exact>
             <PaginaNoEncontrada />
