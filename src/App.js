@@ -40,8 +40,8 @@ function App() {
           <Route path="/" exact>
             <Redirect to="/inicio" />
           </Route>
-          <Route path="/formularioPlaya" exact>
-            <Registrar />
+          <Route path="/formularioPlayas" exact>
+            <FormularioPlayas />
           </Route>
           <Route path="**" exact>
             <PaginaNoEncontrada />
