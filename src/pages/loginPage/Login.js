@@ -7,7 +7,7 @@ export const Login = () => {
   const { loguearUsuario } = useContext(AuthContext);
   const [datosLogin, setDatosLogin] = useState({
     usuario: "",
-    contraseña: "",
+    contrasenya: "",
   });
   const [error, setError] = useState(false);
   const setDatos = (e) => {
@@ -53,19 +53,24 @@ export const Login = () => {
         <form className="form-login" onSubmit={enviarFormulario}>
           <input
             type="text"
-            id="login"
+            id="usuario"
             className="fadeIn second"
-            name="login"
-            placeholder="Usuario"
+            placeholder="Nombre de usuario"
+            value={datosLogin.usuario}
+            onChange={setDatos}
           ></input>
           <input
             type="password"
-            id="password"
+            id="contrasenya"
             className="fadeIn third"
-            name="password"
             placeholder="Contraseña"
+            value={datosLogin.contrasenya}
+            onChange={setDatos}
           ></input>
-          <input type="submit" className="fadeIn five" value="LogIn"></input>
+          {error && <p className="text-danger">Fallo al loguear el usuario!</p>}
+          <button type="submit" className="btn btn-submit w-100">
+            Entrar
+          </button>
         </form>
       </div>
       <div className="row justify-content-center py-3">
