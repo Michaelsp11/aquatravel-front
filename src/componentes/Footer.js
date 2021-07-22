@@ -1,15 +1,22 @@
 export const Footer = () => {
     return (
         <>
-            <footer class="page-footer footer font-small pt-4">
-                <div class="container-fluid text-center text-md-left">
-                    <div class="row justify-content-around">
-                        <p><i class="fas fa-phone"></i> 6334221052</p>
-                        <p><i class="fab fa-instagram"></i> @aquatravel</p>
-                        <p><i class="fab fa-twitter"></i> @aquatravel</p>
+            <div className="">
+                <div className="container both">
+                    <div className="row mt-5 box">
+                        <div className="col-lg-12 col-xs-12 location align-items-center">
+                            <h5 className="mt-lg-0 mt-sm-4 text-center">Contacto</h5>
+                            <p className="mb-0 text-center">Tel: (541) 754-3010</p>
+                            <p className="text-center">Email: info@hsdf.com</p>
+                        </div>
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col copyright">
+                            <p className="text-center"><small className="text-black-50">© 2021. Todos los derechos inventados.</small></p>
+                        </div>
                     </div>
                 </div>
-            </footer>
+            </div>
         </>
     );
 };

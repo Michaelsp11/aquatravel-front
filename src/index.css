@@ -68,19 +68,20 @@ body {
 .row-notfound {
   height: 80vh;
 }
-.footer {
-  background-color: var(--color-blanco);
-  box-shadow: 4px 0px 15px 2px rgb(0 0 0 / 4%);
-  bottom: 1px;
-  height: 60px;
-  width: 100%;
-  color: var(--color-negro);
-  position: absolute;
+.box{
   border-top: 1px solid var(--color-principal);
-
+  font-size: 12px;
+  height: 60px;
+  padding-top: 2.5%;
 }
+
+.both{
+background-color: var(--color-blanco);
+}
+
 @media (min-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
 }
+
