@@ -74,6 +74,14 @@ body {
   height: 60px;
   padding-top: 2.5%;
 }
+
 .both{
 background-color: var(--color-blanco);
 }
+
+@media (min-width: 540px) {
+  .mapa .leaflet-container {
+    min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
+  }
+}
+
