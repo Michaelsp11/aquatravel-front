@@ -79,3 +79,8 @@ body {
   border-top: 1px solid var(--color-principal);
 
 }
+@media (min-width: 540px) {
+  .mapa .leaflet-container {
+    min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
+  }
+}
