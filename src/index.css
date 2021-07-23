@@ -6,8 +6,14 @@
   --color-blanco: #fff;
   --color-negro: #000;
 }
+html{
+  height: 100%;
+  width: 100vw;
+}
 body {
   font-family: "Nunito", sans-serif;
+  height: 100%;
+  width: 100vw;
 }
 .link-page {
   color: var(--color-principal);
@@ -64,6 +70,7 @@ body {
 }
 .mapa .leaflet-container {
   min-height: calc(100vh - var(--altura-cabecera-pie-xs) * 2);
+  width: 100vw;
 }
 .row-notfound {
   height: 80vh;
