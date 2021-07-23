@@ -74,6 +74,10 @@ body {
 .boton:hover {
   background-color: var(--color-azulado);
 }
+.iconoFooter{
+  display: inline-block;
+  font-size: 40px;
+}
 .item-list {
   font-size: 18px;
   margin-left: 25px;
@@ -128,9 +132,6 @@ body {
 }
 .box {
   border-top: 1px solid var(--color-principal);
-  font-size: 12px;
-  height: 60px;
-  padding-top: 2.5%;
 }
 
 .both {
