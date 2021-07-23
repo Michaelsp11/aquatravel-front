@@ -14,6 +14,8 @@ import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
 import { FormularioPlayas } from "./componentes/FormularioPlayas";
+import { FormularioPuntuacion} from "./componentes/FormularioPuntuacion";
+
 function App() {
   return (
     <Router>
@@ -42,6 +44,9 @@ function App() {
           </Route>
           <Route path="/formularioPlayas" exact>
             <FormularioPlayas />
+          </Route>
+          <Route path="/formularioPuntuacion" exact>
+            <FormularioPuntuacion />
           </Route>
           <Route path="**" exact>
             <PaginaNoEncontrada />
