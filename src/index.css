@@ -18,8 +18,6 @@ a:hover {
 }
 body {
   font-family: "Nunito", sans-serif;
-  height: 100%;
-  width: 100vw;
 }
 .link-page {
   color: var(--color-principal);
