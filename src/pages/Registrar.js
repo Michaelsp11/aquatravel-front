@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { AuthContext } from "../contextos/AuthContext";
 
 export const Registrar = () => {
@@ -87,6 +87,18 @@ export const Registrar = () => {
             Registrar
           </button>
         </form>
+      </div>
+      <div className="row justify-content-center py-3">
+        <div className="col-12 text-center">
+          <span className="pr-1">¿Ya tienes una cuenta?</span>
+          <NavLink
+            to="/login"
+            className="link-page color-page"
+            activeClassName="actual"
+          >
+            Login
+          </NavLink>
+        </div>
       </div>
     </div>
   );
