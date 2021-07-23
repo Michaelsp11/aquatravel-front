@@ -39,7 +39,7 @@ export const FormularioPlayas = () =>{
             type="number"
             id="coordenadas"
             className="fadeIn five"
-            placeholder="Introduce las coordenadas del lugar"
+            placeholder="Coordenadas"
           ></input>
           <input type="submit" className="fadeIn six" value="Crear punto"></input>
         </form>
