@@ -7,6 +7,7 @@ import {
 import { Cabecera } from "./componentes/Cabecera";
 import { Footer } from "./componentes/Footer";
 import { Inicial } from "./pages/Inicial";
+import { About } from "./pages/About";
 import { RutaProtegida } from "./componentes/RutaProtegida";
 import { Login } from "./pages/loginPage/Login";
 import { Registrar } from "./pages/Registrar";
@@ -14,7 +15,7 @@ import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
 import { FormularioPlayas } from "./componentes/FormularioPlayas";
-import { FormularioPuntuacion} from "./componentes/FormularioPuntuacion";
+import { FormularioPuntuacion } from "./componentes/FormularioPuntuacion";
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
           <Route path="/inicio" exact>
             <Inicial />
           </Route>
-          <Route path="/lista" exact>
-            {/* <Lista/> */}
+          <Route path="/about" exact>
+            <About />
           </Route>
           <Route path="/login" exact>
             <Login />
