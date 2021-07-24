@@ -15,28 +15,26 @@ export const About = () => {
             diversas opiniones para crear una comunidad de exploradores.
           </p>
         </div>
-        <div>
+        <div className="fundador ml-4">
           <img
             src="./fotoxavi.jpg"
             alt="Logo de la página"
-            className="img-fluid"
           />
         </div>
-        <div>
+        <div className="fundador1">
           <img
             src="./fotofelipe.jpg"
             alt="Logo de la página"
-            className="img-fluid"
           />
         </div>
-        <div>
+        <div className="fundador1">
           <img
             src="./aquaTravel.png"
             alt="Logo de la página"
             className="img-fluid"
           />
         </div>
-        <div>
+        <div className="fundador1">
           <img
             src="./aquaTravel.png"
             alt="Logo de la página"
