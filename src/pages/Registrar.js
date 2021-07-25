@@ -4,7 +4,7 @@ import { AuthContext } from "../contextos/AuthContext";
 
 export const Registrar = () => {
   const history = useHistory();
-  const { loguearUsuario } = useContext(AuthContext);
+  const { usuarioRegistrado } = useContext(AuthContext);
   const [datosRegistro, setDatosRegistro] = useState({
     usuario: "",
     contrasenya: "",
@@ -36,10 +36,8 @@ export const Registrar = () => {
       return;
     }
     setError(false);
-    const { token } = await resp.json();
-    localStorage.setItem("token", token);
-    loguearUsuario();
-    history.push("/inicio");
+    usuarioRegistrado();
+    history.push("/verify");
   };
   return (
     <div className="container">

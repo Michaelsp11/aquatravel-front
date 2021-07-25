@@ -199,6 +199,12 @@ body {
 .both {
   background-color: var(--color-blanco);
 }
+
+.icon-info-user {
+  width: 80px;
+  height: 80px;
+}
+
 .contenedor{
   width: 800px;
   margin: 0 auto;

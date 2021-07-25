@@ -15,7 +15,7 @@ export const Cabecera = () => {
             <div className="col-2 col-sm-1">
               <NavLink to="/inicio" activeClassName="actual">
                 <img
-                  src="./aquaTravel.png"
+                  src="aquaTravel.png"
                   alt="Logo de la página"
                   className="logo-img rounded-circle"
                 />
