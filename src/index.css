@@ -7,8 +7,12 @@
   --color-negro: #000;
 }
 ul,
-li {
+li,
+label {
   margin: 0;
+}
+textarea {
+  resize: none;
 }
 a:hover {
   text-decoration: none;
@@ -19,10 +23,10 @@ a:hover {
 body {
   font-family: "Nunito", sans-serif;
 }
-.link-page {
+.color-link-page {
   color: var(--color-principal);
 }
-.link-page:hover {
+.color-link-page:hover {
   color: var(--color-principal);
   text-decoration: none;
 }
@@ -74,7 +78,7 @@ body {
 .boton:hover {
   background-color: var(--color-azulado);
 }
-.iconoFooter{
+.iconoFooter {
   display: inline-block;
   font-size: 40px;
 }
@@ -133,11 +137,26 @@ body {
 .box {
   border-top: 1px solid var(--color-principal);
 }
-.titulo{
+.titulo {
   font-family: monospace;
   font-size: 43px;
 }
-
+.btn-crearPunto {
+  border-radius: 50%;
+  background: var(--color-principal);
+  height: 40px;
+  width: 40px;
+  z-index: 23;
+  justify-content: center;
+  align-items: center;
+  bottom: 40px;
+  right: 10px;
+  display: flex;
+  position: absolute;
+}
+.btn-crearPunto svg {
+  color: #fff;
+}
 .fundador {
   display: inline-block;
   position: relative;
@@ -194,8 +213,6 @@ body {
   margin-top: -5px;
 }
 
-
-
 .both {
   background-color: var(--color-blanco);
 }
@@ -205,18 +222,18 @@ body {
   height: 80px;
 }
 
-.contenedor{
+.contenedor {
   width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.circulo{
+.circulo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.circulo.activo{
+.circulo.activo {
   background-color: orange;
 }
 
