@@ -16,7 +16,10 @@ import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
 import { FormularioPlayas } from "./componentes/FormularioPlayas";
 import { FormularioPuntuacion } from "./componentes/FormularioPuntuacion";
-
+import { UsuarioConfirmado } from "./pages/UsuarioConfirmado";
+import { VerificarUsuario } from "./pages/VerificarUsuario";
+import { UsuarioRegistrado } from "./componentes/UsuarioRegistrado";
+import { ConfirmarUsuario } from "./componentes/ConfirmarUsuario";
 function App() {
   return (
     <Router>
@@ -28,6 +31,16 @@ function App() {
           </Route>
           <Route path="/about" exact>
             <About />
+          </Route>
+          <Route path="/confirmado/:idUser" exact>
+            <ConfirmarUsuario>
+              <UsuarioConfirmado />
+            </ConfirmarUsuario>
+          </Route>
+          <Route path="/verify" exact>
+            <UsuarioRegistrado>
+              <VerificarUsuario />
+            </UsuarioRegistrado>
           </Route>
           <Route path="/login" exact>
             <Login />

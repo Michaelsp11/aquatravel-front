@@ -136,7 +136,10 @@ body {
 .both {
   background-color: var(--color-blanco);
 }
-
+.icon-info-user {
+  width: 80px;
+  height: 80px;
+}
 @media (min-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
