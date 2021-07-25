@@ -78,7 +78,7 @@ export const Login = () => {
           <span className="pr-1">¿Aún no estas registrado?</span>
           <NavLink
             to="/register"
-            className="link-page color-page"
+            className="color-link-page color-page"
             activeClassName="actual"
           >
             Registrate
