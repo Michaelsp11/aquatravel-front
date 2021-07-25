@@ -133,6 +133,11 @@ body {
 .box {
   border-top: 1px solid var(--color-principal);
 }
+.titulo{
+  font-family: monospace;
+  font-size: 43px;
+}
+
 .fundador {
   display: inline-block;
   position: relative;
