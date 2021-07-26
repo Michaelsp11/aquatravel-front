@@ -3,8 +3,8 @@ export const PaginaSitio = () => {
 
     return (
 
-        <body className="container-flex">
-            <main className="row">
+        <body className="container">
+            <main className="container-flex general">
 
 
                 {/* IMAGENES DEL SITIO */}
@@ -17,7 +17,7 @@ export const PaginaSitio = () => {
                 <div className="col-12 datos">
                     <div className="row">
                         <span className="col-8 text-left nombre"><h4>Playa de Bogatell</h4></span> <span className="col-4 text-rigth puntuación"></span>
-                        <span className="col-6 text-left nombre provincia">Barcelona</span> <span className="col-6 text-center iconos"></span> <span className="col-6 text-right bandera"></span>
+                        <span className="col-6 text-left provincia">Barcelona</span> <span className="col-6 text-center iconos"></span> <span className="col-6 text-right bandera"></span>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@ export const PaginaSitio = () => {
 
                 {/* MAPA CON UBICACION DEL LUGAR */}
 
-                <div className="col-12 mapa"></div>
+                <div className="col-12 text-center mapa"><img alt="Mapa con la ubicacion" src="maps.PNG"></img></div>
 
             </main>
         </body>
