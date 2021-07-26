@@ -20,6 +20,7 @@ import { UsuarioConfirmado } from "./pages/UsuarioConfirmado";
 import { VerificarUsuario } from "./pages/VerificarUsuario";
 import { UsuarioRegistrado } from "./componentes/UsuarioRegistrado";
 import { ConfirmarUsuario } from "./componentes/ConfirmarUsuario";
+import { PaginaSitio } from "./pages/PaginaSitio";
 function App() {
   return (
     <Router>
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/formularioPuntuacion" exact>
             <FormularioPuntuacion />
+          </Route>
+          <Route path="/sitio">
+            <PaginaSitio />
           </Route>
           <Route path="**" exact>
             <PaginaNoEncontrada />
