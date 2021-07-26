@@ -58,7 +58,7 @@ export const Cabecera = () => {
                   <li className="">
                     <NavLink
                       to="/login"
-                      className="link-page"
+                      className="color-link-page"
                       activeClassName="actual"
                       onClick={showNavItems}
                     >
@@ -69,7 +69,7 @@ export const Cabecera = () => {
                   <li className="">
                     <NavLink
                       to="/logout"
-                      className="link-page"
+                      className="color-link-page"
                       activeClassName="actual"
                       onClick={showNavItems}
                     >
@@ -103,7 +103,7 @@ export const Cabecera = () => {
                   <li className="list-inline-item">
                     <NavLink
                       to="/login"
-                      className="link-page"
+                      className="color-link-page"
                       activeClassName="actual"
                     >
                       Iniciar Sesión
@@ -113,7 +113,7 @@ export const Cabecera = () => {
                   <li className="list-inline-item">
                     <NavLink
                       to="/logout"
-                      className="link-page"
+                      className="color-link-page"
                       activeClassName="actual"
                     >
                       Cerrar Sesión

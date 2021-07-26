@@ -1,6 +1,6 @@
-import { NavLink, useHistory, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { useContext, useEffect, useCallback } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../contextos/AuthContext";
 export const UsuarioConfirmado = () => {
   const { setRegistrado } = useContext(AuthContext);
@@ -19,7 +19,7 @@ export const UsuarioConfirmado = () => {
         <NavLink
           to="/login"
           activeClassName="actual"
-          className="link-page col-12 text-center"
+          className="color-link-page col-12 text-center"
         >
           Accede
         </NavLink>
