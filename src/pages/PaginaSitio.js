@@ -1,32 +1,28 @@
-
 export const PaginaSitio = () => {
 
-    return (
+  return (
 
-        <div className="container general">
+      <div className="general">
 
-            {/* IMAGENES DEL SITIO */}
+          {/* IMAGENES DEL SITIO */}
+          <div className="imagenlugar w-100 position-relative sm-row">
+              <img className="col-12 descripcion-imagen" alt="Playa de bogatell" src="playabogatell.jpg"></img>
+          </div>
 
-            <div className="imagen-sitio col-12 text-center"><img className="descripcion-imagen" alt="Playa de bogatell" src="playabogatell.jpg"></img></div>
+          {/* NOMBRE Y DATOS IMPORTANTES */}
+          <div className="row datos">
+              <span className="col-12 nombreplaya"><h4>PLAYA DE BOGATELL</h4></span>
+              <span className="col-12 puntuacion">VALORACIÓN</span>
+              <span className="col-12 provinciasitio">PROVINCIA: BARCELONA</span>
+              <span className="col-12 comunidadsitio">COMUNIDAD: CATALUNYA</span>
+          </div>
 
-            {/* NOMBRE Y DATOS IMPORTANTES */}
-            <div className="row datos">
-                <div className="col-12">
-                    <span className="row nombre"><h4>Playa de Bogatell</h4></span> <span className="col-4 puntuación"></span>
-                    <span className="row provincia">PRVINCIA: Barcelona</span>
-                    <span className="row iconos">iconos:</span>
-                    <span className="row bandera">BANDERA:</span>
-                </div>
-            </div>
-
-            {/* DESCRIPCION DEL SITIO */}
-            <div className="row descripcion">
-                <div className="col-12">
-                    <p className="row descript">DESCRIPCIÓN: Arena suave, playa concurrida.</p>
-                    <p className="row servicios">SERVICIOS: Socorrista, chiringuito bar.</p>
-                    <p className="row acceso">ACCESO: fácil, zona azul para aparcar.</p>
-                </div>
-            </div>
-        </div>
-    );
+          {/* DESCRIPCION DEL SITIO */}
+          <div className="row descripcion">
+              <span className="col-12 descripcionsitio">DESCRIPCIÓN: Playa concurrida.</span>
+              <span className="col-12 coordenadassitio">COORDENADAS: </span>
+              <span className="col-12 tipositio">TIPO: PLAYA</span>
+          </div>
+      </div>
+  );
 };
