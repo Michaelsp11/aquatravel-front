@@ -233,47 +233,43 @@ body {
 .circulo.activo {
   background-color: orange;
 }
-.imagen-sitio{
-  display: flex;
-  justify-content: center;
-  margin-top: 2px;
-  margin-right: 10px;
-  height: 300px;
-}
 .descripcion-imagen{
   display: flex;
   justify-content: center ;
+  align-items: center ;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+.imagen-sitio{
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  margin-left: 10px;
 }
 .datos{
   margin: 10px;
-  border: 2px solid var(--color-principal);
+  padding: 5px;
+  border-top: 1px solid var(--color-principal);
 }
 .datos > .nombre{
   margin-left: 60px;
 }
 .descripcion{
   margin: 10px;
-  border: 2px solid var(--color-principal);
+  padding: 5px;
+  border-top: 1px solid var(--color-principal);
 };
-.ubicacion{
-  margin: 4px;
-  border: 2px solid var(--color-principal);
-}
-@media (max-width: 540px) {
+@media (min-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
   .imagen{
+    display: flex;
     justify-content: center;
-    width: fit-content;
-  }
-  .imagen-sitio{
-    justify-content: center;
-    width: fit-content;
   }
   .descripcion-imagen{
     display: flex;
-    justify-content: center;
-    width: fit-content;
+    align-items: center;
+    width:500px;
   }
 };
