@@ -7,8 +7,8 @@ export const PaginaSitio = () => {
 
             {/* IMAGENES DEL SITIO */}
 
-            <div className="row imagen">
-                <div className="col-12 text-center"><img classname="foto" alt="Playa de bogatell" src="playabogatell.jpg"></img></div>
+            <div className="row imagen-sitio">
+                <div className="col-12 text-center"><img className="foto" alt="Playa de bogatell" src="playabogatell.jpg"></img></div>
             </div>
 
             {/* NOMBRE Y DATOS IMPORTANTES */}
@@ -20,8 +20,6 @@ export const PaginaSitio = () => {
                     <span className="row bandera">BANDERA:</span>
                 </div>
             </div>
-
-
 
             {/* DESCRIPCION DEL SITIO */}
             <div className="row descripcion">
