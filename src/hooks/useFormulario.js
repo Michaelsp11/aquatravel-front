@@ -7,7 +7,7 @@ export const useFormulario = (datosIniciales) => {
     setDatos({
       ...datos,
       [e.target.id]:
-        e.target.type === "checkbox" ? e.target.checked : e.target.value,
+        e.target.type === "file" ? e.target.files[0] : e.target.value,
     });
   };
   useEffect(() => {
