@@ -242,3 +242,31 @@ body {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
 }
+
+
+
+.general > .imagen{
+margin-top: 2px;
+height: 300px;
+};
+
+.general > .datos{
+margin: 4px;
+border: 1px solid var(--color-principal);
+};
+.general > .datos > .nombre{
+  margin-left: 6px;
+}
+
+.general > .descripcion{
+margin: 4px;
+border: 1px solid var(--color-principal);
+};
+.general > .descripcion > .descript{
+margin-left: 6px;
+}
+
+.general > .mapa{
+margin: 4px;
+border: 1px solid var(--color-principal);
+};
