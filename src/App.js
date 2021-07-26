@@ -14,7 +14,7 @@ import { Registrar } from "./pages/Registrar";
 import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
-import { FormularioPlayas } from "./componentes/FormularioPlayas";
+import { CrearPunto, FormularioPlayas } from "./pages/CrearPunto";
 import { FormularioPuntuacion } from "./componentes/FormularioPuntuacion";
 import { UsuarioConfirmado } from "./pages/UsuarioConfirmado";
 import { VerificarUsuario } from "./pages/VerificarUsuario";
@@ -32,6 +32,11 @@ function App() {
           </Route>
           <Route path="/about" exact>
             <About />
+          </Route>
+          <Route path="/crear-punto" exact>
+            <RutaProtegida>
+              <CrearPunto />
+            </RutaProtegida>
           </Route>
           <Route path="/confirmado/:idUser" exact>
             <ConfirmarUsuario>
@@ -57,6 +62,7 @@ function App() {
           <Route path="/" exact>
             <Redirect to="/inicio" />
           </Route>
+
           <Route path="/formularioPlayas" exact>
             <FormularioPlayas />
           </Route>
@@ -66,6 +72,7 @@ function App() {
           <Route path="/sitio">
             <PaginaSitio />
           </Route>
+
           <Route path="**" exact>
             <PaginaNoEncontrada />
           </Route>

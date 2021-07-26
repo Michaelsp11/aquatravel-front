@@ -91,7 +91,7 @@ export const Registrar = () => {
           <span className="pr-1">¿Ya tienes una cuenta?</span>
           <NavLink
             to="/login"
-            className="link-page color-page"
+            className="color-link-page color-page"
             activeClassName="actual"
           >
             Login
