@@ -1,6 +1,5 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { AuthContext } from "../contextos/AuthContext";
 import { useFormulario } from "../hooks/useFormulario";
 
 export const CrearPunto = () => {
@@ -185,7 +184,7 @@ export const CrearPunto = () => {
             >
               Imagen:
             </label>
-            <input type="file" id="imagen" value={imagen} onChange={setDato} />
+            <input type="file" id="imagen" onChange={setDato} />
           </div>
           <div className="form-group">
             <label
