@@ -15,10 +15,6 @@ export const PaginaSitio = () => {
               <span className="col-12 puntuacion">VALORACIÓN</span>
               <span className="col-12 provinciasitio">PROVINCIA: BARCELONA</span>
               <span className="col-12 comunidadsitio">COMUNIDAD: CATALUNYA</span>
-          </div>
-
-          {/* DESCRIPCION DEL SITIO */}
-          <div className="row descripcion">
               <span className="col-12 descripcionsitio">DESCRIPCIÓN: Playa concurrida.</span>
               <span className="col-12 coordenadassitio">COORDENADAS: </span>
               <span className="col-12 tipositio">TIPO: PLAYA</span>

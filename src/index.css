@@ -5,6 +5,8 @@
   --altura-cabecera-pie-md: 75px;
   --color-blanco: #fff;
   --color-negro: #000;
+  --color-fondo: #DCFAFC;
+
 }
 ul,
 li,
@@ -21,7 +23,7 @@ a:hover {
   font-weight: bold;
 }
 body {
-  font-family: "Nunito", sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .color-link-page {
   color: var(--color-principal);
@@ -235,14 +237,13 @@ body {
 }
 .imagenlugar{
   margin-top: 4px;
-}
-.descripcion-imagen{
+
 }
 .datos{
   margin: 4px;
   padding-top: 8px;
   padding-bottom: 8px;
-  border-top: 1px solid var(--color-principal);
+  background-color: var(--color-fondo);
 }
 .datos > .puntuacion{
   padding-bottom: 5px;
@@ -250,23 +251,13 @@ body {
 .datos > .provinciasitio{
   padding-bottom: 5px;
 }
-
-.descripcion{
-  margin: 4px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-top: 1px solid var(--color-principal);
-};
-
-.descripcion > .descripcionsitio{
+.datos > .descripcionsitio{
   padding-bottom: 5px;
-
 }
-.descripcion > .coordenadassitio{
+.datos > .coordenadassitio{
   padding-bottom: 5px;
-
 }
-.descripcion > .tipositio{
+.datos > .tipositio{
   padding-bottom: 5px;
 }
 
