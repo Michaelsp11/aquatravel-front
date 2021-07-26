@@ -1,18 +1,38 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { FaPlus } from "react-icons/fa";
-import { useState, useContext } from "react";
+import { useState, useContext, useCallback, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import L from "leaflet";
 import { AuthContext } from "../contextos/AuthContext";
 export const Inicial = () => {
   const { logueado } = useContext(AuthContext);
+  const [listadoPuntos, setListadoPuntos] = useState([]);
   const [coordenadas, setCoordenadas] = useState([41.4036299, 2.1743558]);
   navigator.geolocation.getCurrentPosition((posicion) => {
     const { latitude, longitude } = posicion.coords;
     setCoordenadas([latitude, longitude]);
   });
-
+  useEffect(() => {
+    cargarPuntos();
+  }, [cargarPuntos]);
+  const cargarPuntos = useCallback(async () => {
+    const resp = await fetch(`${process.env.REACT_APP_URL_API}puntos/listado`);
+    if (!resp.ok) {
+      return;
+    }
+    const listadoPuntosAPI = await resp.json();
+    setListadoPuntos(listadoPuntosAPI);
+  }, []);
+  const createIcon = (url) => {
+    return new L.Icon({
+      iconUrl: url,
+      iconSize: [41, 41],
+    });
+  };
+  const getIcon = () => {
+    return createIcon("./icon-beach.png");
+  };
   return (
-
     <main className="contenedor-mapa">
       <div className="mapa w-100 position-relative">
         <MapContainer center={coordenadas} zoom={13}>
@@ -21,8 +41,18 @@ export const Inicial = () => {
             attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
           />
           <Marker position={coordenadas}>
-            <Popup>Estas Aqui! o No WhoKnow!</Popup>
+            <Popup>Estas Aqui!</Popup>
           </Marker>
+          {listadoPuntos.length > 0 &&
+            listadoPuntos.map((punto) => (
+              <Marker
+                key={punto._id}
+                position={[+punto.latitud, +punto.longitud]}
+                icon={getIcon()}
+              >
+                <Popup>Estas Aqui!</Popup>
+              </Marker>
+            ))}
         </MapContainer>
         {logueado && (
           <NavLink to="/crear-punto" className="btn-crearPunto">
