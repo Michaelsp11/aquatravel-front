@@ -212,16 +212,13 @@ body {
   margin-left: 0px;
   margin-top: -5px;
 }
-
 .both {
   background-color: var(--color-blanco);
 }
-
 .icon-info-user {
   width: 80px;
   height: 80px;
 }
-
 .contenedor {
   width: 800px;
   margin: 0 auto;
@@ -232,22 +229,28 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-};
+}
 .circulo.activo {
   background-color: orange;
-};
+}
 .imagen-sitio{
+  display: flex;
+  justify-content: center;
   margin-top: 2px;
   margin-right: 10px;
   height: 300px;
-};
+}
+.descripcion-imagen{
+  display: flex;
+  justify-content: center ;
+}
 .datos{
   margin: 10px;
   border: 2px solid var(--color-principal);
-};
+}
 .datos > .nombre{
   margin-left: 60px;
-};
+}
 .descripcion{
   margin: 10px;
   border: 2px solid var(--color-principal);
@@ -255,12 +258,21 @@ body {
 .ubicacion{
   margin: 4px;
   border: 2px solid var(--color-principal);
-};
+}
 @media (max-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
   .imagen{
+    justify-content: center;
+    width: fit-content;
+  }
+  .imagen-sitio{
+    justify-content: center;
+    width: fit-content;
+  }
+  .descripcion-imagen{
+    display: flex;
     justify-content: center;
     width: fit-content;
   }
