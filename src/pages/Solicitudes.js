@@ -16,14 +16,7 @@ export const Solicitudes = () => {
   useEffect(() => getPuntosPendientes(), [getPuntosPendientes]);
   const aceptarSolicitud = async (id) => {
     const resp = await fetch(
-      process.env.REACT_APP_URL_API + "puntos/aceptarPunto",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      }
+      process.env.REACT_APP_URL_API + `puntos/aceptarPunto/${id}`
     );
     if (!resp.ok) {
       return;
