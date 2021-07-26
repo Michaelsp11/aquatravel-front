@@ -62,10 +62,6 @@ function App() {
           <Route path="/" exact>
             <Redirect to="/inicio" />
           </Route>
-
-          <Route path="/crearPunto" exact>
-            <CrearPunto />
-          </Route>
           <Route path="/formularioPuntuacion" exact>
             <FormularioPuntuacion />
           </Route>
