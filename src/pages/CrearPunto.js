@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import { useFormulario } from "../hooks/useFormulario";
 
@@ -26,6 +26,8 @@ export const CrearPunto = () => {
     tipoPunto,
     imagen,
   } = datos;
+  const [comunidades, setComunidades] = useState([]);
+  const [provincias, setProvincias] = useState([]);
   const appendearDatosFormData = async (datosFormData) => {
     for (const dato in datos) {
       datosFormData.append(dato, datos[dato]);
@@ -51,7 +53,7 @@ export const CrearPunto = () => {
     let datosFormData = new FormData();
     datosFormData = await appendearDatosFormData(datosFormData);
     const resp = await fetch(
-      process.env.REACT_APP_URL_API + "solicitudes/nueva-solicitud",
+      process.env.REACT_APP_URL_API + "puntos/nuevo-punto",
       {
         method: "POST",
         body: datosFormData,
@@ -64,6 +66,27 @@ export const CrearPunto = () => {
     setError(false);
     history.push("/inicio");
   };
+  const getComunidades = async () => {
+    const resp = await fetch(
+      `${process.env.REACT_APP_URL_API}comunidades/listado`
+    );
+    if (!resp.ok) {
+      return;
+    }
+    const listadoComunidadesAPI = await resp.json();
+    setComunidades(listadoComunidadesAPI);
+  };
+  const cargarProvincias = async (idComunidad) => {
+    const resp = await fetch(
+      `${process.env.REACT_APP_URL_API}provincias/listado/${idComunidad}`
+    );
+    if (!resp.ok) {
+      return;
+    }
+    const listadoProvinciasAPI = await resp.json();
+    setProvincias(listadoProvinciasAPI);
+  };
+  useEffect(() => getComunidades(), []);
   return (
     <div className="container">
       <div className="row">
@@ -96,35 +119,48 @@ export const CrearPunto = () => {
           </div>
           <div className="form-group">
             <label
-              htmlFor="provincia"
-              className="font-weight-bold color-link-page"
-            >
-              Provincia:
-            </label>
-            <input
-              type="text"
-              id="provincia"
-              className="fadeIn third"
-              placeholder="Introduce la provincia"
-              value={provincia}
-              onChange={setDato}
-            ></input>
-          </div>
-          <div className="form-group">
-            <label
               htmlFor="comunidad"
               className="font-weight-bold color-link-page"
             >
               Comunidad:
             </label>
-            <input
-              type="text"
+            <select
               id="comunidad"
-              className="fadeIn four"
-              placeholder="Introduce la comunidad"
+              className="fadeIn third"
               value={comunidad}
+              onChange={(e) => {
+                setDato(e);
+                cargarProvincias(e.target.value);
+              }}
+            >
+              <option value="">Selecciona una comunidad:</option>
+              {comunidades.map((comunidad) => (
+                <option key={comunidad.id} value={comunidad.id}>
+                  {comunidad.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label
+              htmlFor="provincia"
+              className="font-weight-bold color-link-page"
+            >
+              Provincia:
+            </label>
+            <select
+              id="provincia"
+              className="fadeIn four"
+              value={provincia}
               onChange={setDato}
-            ></input>
+            >
+              <option value="">Selecciona una provincia:</option>
+              {provincias.map((provincia) => (
+                <option key={provincia._id} value={provincia.nombre}>
+                  {provincia.nombre}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="form-group">
             <label
