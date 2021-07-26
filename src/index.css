@@ -240,6 +240,10 @@ body {
   margin-top: 10px;
   padding-right: 20px;
 }
+.imagen{
+  display: flex;
+  justify-content: center;
+}
 .imagen-sitio{
   display: flex;
   justify-content: center;
