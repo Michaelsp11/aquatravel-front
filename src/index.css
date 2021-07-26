@@ -236,8 +236,27 @@ body {
 .circulo.activo {
   background-color: orange;
 }
-
-@media (min-width: 540px) {
+.imagen{
+  margin-top: 2px;
+  margin-right: 10px;
+  height: 300px;
+};
+.datos{
+  margin: 10px;
+  border: 2px solid var(--color-principal);
+};
+.datos > .nombre{
+  margin-left: 60px;
+}
+.descripcion{
+  margin: 10px;
+  border: 2px solid var(--color-principal);
+};
+.ubicacion{
+  margin: 4px;
+  border: 2px solid var(--color-principal);
+};
+@media (max-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
@@ -246,29 +265,3 @@ body {
     width: fit-content;
   }
 }
-
-
-
-.imagen{
-  margin-top: 2px;
-  height: 300px;
-};
-
-
-.datos{
-  margin: 10px;
-  border: 2px solid var(--color-principal);
-};
-.datos > .nombre{
-  margin-left: 60px;
-}
-
-.descripcion{
-  margin: 10px;
-  border: 2px solid var(--color-principal);
-};
-
-.ubicacion{
-  margin: 4px;
-  border: 2px solid var(--color-principal);
-};
