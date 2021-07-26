@@ -1,12 +1,35 @@
 import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../contextos/AuthContext";
+import { useEffect } from "react";
 export const Cabecera = () => {
   const { logueado } = useContext(AuthContext);
   const [showItems, setShowItems] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const showNavItems = () => {
     setShowItems(!!!showItems);
   };
+  const setIdUsuario = () => {
+    if (localStorage.getItem("token")) {
+      let base64Url = localStorage.getItem("token").split(".")[1];
+      let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      let jsonPayload = decodeURIComponent(
+        atob(base64)
+          .split("")
+          .map(function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join("")
+      );
+      return JSON.parse(jsonPayload).idUsuario;
+    } else {
+      return "";
+    }
+  };
+  useEffect(() => {
+    const idUsuario = setIdUsuario();
+    setIsAdmin(idUsuario === process.env.REACT_APP_ADMIN);
+  }, []);
   return (
     <>
       <header className="cabecera bg-white py-2 position-relative">
@@ -66,16 +89,28 @@ export const Cabecera = () => {
                     </NavLink>
                   </li>
                 ) : (
-                  <li className="">
-                    <NavLink
-                      to="/logout"
-                      className="color-link-page"
-                      activeClassName="actual"
-                      onClick={showNavItems}
-                    >
-                      Cerrar Sesión
-                    </NavLink>
-                  </li>
+                  <>
+                    <li className="">
+                      <NavLink
+                        to="/solicitudes"
+                        className="color-link-page"
+                        activeClassName="actual"
+                        onClick={showNavItems}
+                      >
+                        Bandeja de solicitudes
+                      </NavLink>
+                    </li>
+                    <li className="">
+                      <NavLink
+                        to="/logout"
+                        className="color-link-page"
+                        activeClassName="actual"
+                        onClick={showNavItems}
+                      >
+                        Cerrar Sesión
+                      </NavLink>
+                    </li>
+                  </>
                 )}
               </ul>
             </div>
@@ -110,15 +145,28 @@ export const Cabecera = () => {
                     </NavLink>
                   </li>
                 ) : (
-                  <li className="list-inline-item">
-                    <NavLink
-                      to="/logout"
-                      className="color-link-page"
-                      activeClassName="actual"
-                    >
-                      Cerrar Sesión
-                    </NavLink>
-                  </li>
+                  <>
+                    {isAdmin && (
+                      <li className="list-inline-item">
+                        <NavLink
+                          to="/solicitudes"
+                          className="text-dark"
+                          activeClassName="actual"
+                        >
+                          Bandeja de solicitudes
+                        </NavLink>
+                      </li>
+                    )}
+                    <li className="list-inline-item">
+                      <NavLink
+                        to="/logout"
+                        className="color-link-page"
+                        activeClassName="actual"
+                      >
+                        Cerrar Sesión
+                      </NavLink>
+                    </li>
+                  </>
                 )}
               </ul>
             </div>

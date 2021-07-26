@@ -21,6 +21,7 @@ import { VerificarUsuario } from "./pages/VerificarUsuario";
 import { UsuarioRegistrado } from "./componentes/UsuarioRegistrado";
 import { ConfirmarUsuario } from "./componentes/ConfirmarUsuario";
 import { PaginaSitio } from "./pages/PaginaSitio";
+import { Solicitudes } from "./pages/Solicitudes";
 function App() {
   return (
     <Router>
@@ -36,6 +37,11 @@ function App() {
           <Route path="/crear-punto" exact>
             <RutaProtegida>
               <CrearPunto />
+            </RutaProtegida>
+          </Route>
+          <Route path="/solicitudes" exact>
+            <RutaProtegida>
+              <Solicitudes />
             </RutaProtegida>
           </Route>
           <Route path="/confirmado/:idUser" exact>

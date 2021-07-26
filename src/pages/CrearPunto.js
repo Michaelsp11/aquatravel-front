@@ -100,7 +100,11 @@ export const CrearPunto = () => {
             height="80"
           />
         </div>
-        <form className="form-login mb-5" onSubmit={enviarFormulario}>
+        <form
+          autoComplete="off"
+          className="form-login mb-5"
+          onSubmit={enviarFormulario}
+        >
           <div className="form-group">
             <label
               htmlFor="nombre"
