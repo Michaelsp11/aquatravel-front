@@ -12,7 +12,7 @@ export const Footer = () => {
                     </div>
                     <div className="row">
                         <div className="col copyright">
-                            <p className="text-center"><small className="text-black-50">© 2021. Todos los derechos inventados.</small></p>
+                            <p className="text-center"><small className="text-black-50">© 2021. Todos los derechos reservados.</small></p>
                         </div>
                     </div>
                 </div>

@@ -11,10 +11,9 @@ export const Inicial = () => {
     setCoordenadas([latitude, longitude]);
   });
 
-  // const obtenerUbicacionActual =
-
   return (
-    <main className="">
+
+    <main className="contenedor-mapa">
       <div className="mapa w-100 position-relative">
         <MapContainer center={coordenadas} zoom={13}>
           <TileLayer
