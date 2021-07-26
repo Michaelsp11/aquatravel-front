@@ -241,32 +241,34 @@ body {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
+  .imagen{
+    justify-content: center;
+    width: fit-content;
+  }
 }
 
 
 
-.general > .imagen{
-margin-top: 2px;
-height: 300px;
+.imagen{
+  margin-top: 2px;
+  height: 300px;
 };
 
-.general > .datos{
-margin: 4px;
-border: 1px solid var(--color-principal);
+
+.datos{
+  margin: 10px;
+  border: 2px solid var(--color-principal);
 };
-.general > .datos > .nombre{
-  margin-left: 6px;
+.datos > .nombre{
+  margin-left: 60px;
 }
 
-.general > .descripcion{
-margin: 4px;
-border: 1px solid var(--color-principal);
+.descripcion{
+  margin: 10px;
+  border: 2px solid var(--color-principal);
 };
-.general > .descripcion > .descript{
-margin-left: 6px;
-}
 
-.general > .mapa{
-margin: 4px;
-border: 1px solid var(--color-principal);
+.ubicacion{
+  margin: 4px;
+  border: 2px solid var(--color-principal);
 };

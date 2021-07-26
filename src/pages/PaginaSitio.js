@@ -9,33 +9,38 @@ export const PaginaSitio = () => {
 
                 {/* IMAGENES DEL SITIO */}
 
-                <div className="col-12 text-center imagen"><img alt="Playa de bogatell" src="playabogatell.jpg"></img></div>
-
+                <div className="row">
+                    <div className="col-12 text-center imagen"><img classname="foto" alt="Playa de bogatell" src="playabogatell.jpg"></img></div>
+                </div>
 
                 {/* NOMBRE Y DATOS IMPORTANTES */}
-
-                <div className="col-12 datos">
-                    <div className="row">
-                        <span className="col-8 text-left nombre"><h4>Playa de Bogatell</h4></span> <span className="col-4 text-rigth puntuación"></span>
-                        <span className="col-6 text-left provincia">Barcelona</span> <span className="col-6 text-center iconos"></span> <span className="col-6 text-right bandera"></span>
+                <div className="row">
+                    <div className="col-12 datos">
+                        <span className="row nombre"><h4>Playa de Bogatell</h4></span> <span className="col-4 puntuación"></span>
+                        <span className="row">
+                            <span className="col-6 provincia">PRVINCIA: Barcelona</span> <span className="col-6 iconos">iconos:</span> <span className="col-6 bandera">BANDERA:</span>
+                        </span>
                     </div>
                 </div>
+
 
 
                 {/* DESCRIPCION DEL SITIO */}
-
-                <div className="col-12 descripcion">
-                    <div className="row">
-                        <span className="col-12 descript"><p>Arena suave, playa concurrida.</p></span>
-                        <span className="col-6 servicios"><p></p>Socorrista, chiringuito bar.</span> <span className="col-6 acceso"><p>Acceso fácil, zona azul para aparcar.</p></span>
+                <div className="row">
+                    <div className="col-12 descripcion">
+                        <p className="row text-center descript">DESCRIPCIÓN: Arena suave, playa concurrida.</p>
+                        <p className="row text-center servicios">SERVICIOS: Socorrista, chiringuito bar.</p>
+                        <p className="row text-center acceso">ACCESO: fácil, zona azul para aparcar.</p>
                     </div>
                 </div>
 
 
+
+
                 {/* MAPA CON UBICACION DEL LUGAR */}
-
-                <div className="col-12 text-center mapa"><img alt="Mapa con la ubicacion" src="maps.PNG"></img></div>
-
+                <div className="row">
+                    <div className="col-12 text-center ubicacion"><img classname="foto" alt="Mapa con la ubicacion" src="maps.PNG"></img></div>
+                </div>
             </main>
         </body>
     );
