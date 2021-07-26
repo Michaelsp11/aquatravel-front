@@ -1,12 +1,12 @@
 import { useState } from "react/cjs/react.development";
 import { ContenedorCirculo } from "./ContenedorCirculo";
-export const FormularioPuntuacion = () =>{
+export const FormularioPuntuacion = () => {
   const [activo, setActivo] = useState(false);
-  const toggle=()=>{
+  const toggle = () => {
     setActivo(!activo);
   };
 
-  return(
+  return (
     <div className="container">
       <div className="row">
         <div className="col-12 d-flex justify-content-center py-5">
@@ -19,9 +19,13 @@ export const FormularioPuntuacion = () =>{
             height="80"
           />
         </div>
-        <form className="form-puntuacion">
-            <ContenedorCirculo />
-           <input type="submit" className="fadeIn submit" value="Puntuar playa"></input>
+        <form autoComplete="off" className="form-puntuacion">
+          <ContenedorCirculo />
+          <input
+            type="submit"
+            className="fadeIn submit"
+            value="Puntuar playa"
+          ></input>
         </form>
       </div>
     </div>

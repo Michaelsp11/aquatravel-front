@@ -52,7 +52,11 @@ export const Registrar = () => {
             height="80"
           />
         </div>
-        <form className="form-login" onSubmit={enviarFormulario}>
+        <form
+          autoComplete="off"
+          className="form-login"
+          onSubmit={enviarFormulario}
+        >
           <input
             type="text"
             id="usuario"
