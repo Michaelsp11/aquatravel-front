@@ -5,8 +5,7 @@
   --altura-cabecera-pie-md: 75px;
   --color-blanco: #fff;
   --color-negro: #000;
-  --color-fondo: #DCFAFC;
-
+  --color-fondo: #dcfafc;
 }
 ul,
 li,
@@ -23,7 +22,7 @@ a:hover {
   font-weight: bold;
 }
 body {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .color-link-page {
   color: var(--color-principal);
@@ -235,34 +234,41 @@ body {
 .circulo.activo {
   background-color: orange;
 }
-.imagenlugar{
+.imagenlugar {
   margin-top: 4px;
-
 }
-.datos{
+.datos {
   margin: 4px;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: var(--color-fondo);
 }
-.datos > .puntuacion{
+.datos > .puntuacion {
   padding-bottom: 5px;
 }
-.datos > .provinciasitio{
+.datos > .provinciasitio {
   padding-bottom: 5px;
 }
-.datos > .descripcionsitio{
+.datos > .descripcionsitio {
   padding-bottom: 5px;
 }
-.datos > .coordenadassitio{
+.datos > .coordenadassitio {
   padding-bottom: 5px;
 }
-.datos > .tipositio{
+.datos > .tipositio {
   padding-bottom: 5px;
 }
-
+.imagen-popup-punto {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+}
+.info-punto {
+  background: var(--color-principal);
+  border-radius: 10px;
+}
 @media (min-width: 540px) {
   .mapa .leaflet-container {
     min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
   }
-};
+} ;

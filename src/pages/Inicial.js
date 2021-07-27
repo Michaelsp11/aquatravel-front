@@ -50,7 +50,66 @@ export const Inicial = () => {
                 position={[+punto.latitud, +punto.longitud]}
                 icon={getIcon()}
               >
-                <Popup>Estas Aqui!</Popup>
+                <Popup>
+                  <div className="container">
+                    <div className="row">
+                      <img
+                        src={punto.urls[0]}
+                        alt={punto.nombre}
+                        width="300px"
+                        height="150px"
+                        className="imagen-popup-punto py-2"
+                      />
+                      <div className="col-12">
+                        <ul className="info-punto row list-unstyled py-2">
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Nombre:
+                            </span>
+                            {punto.nombre}
+                          </li>
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Provincia:
+                            </span>
+                            {punto.provincia}
+                          </li>
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Comunidad:
+                            </span>
+                            {punto.comunidad}
+                          </li>
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Longitud:
+                            </span>
+                            {punto.longitud}
+                          </li>
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Latitud:
+                            </span>
+                            {punto.latitud}
+                          </li>
+                          <li className="col-12 text-white mb-1">
+                            <span className="font-weight-bold mr-2">
+                              Categoria:
+                            </span>
+                            {punto.tipoPunto.charAt(0).toUpperCase() +
+                              punto.tipoPunto.slice(1)}
+                          </li>
+                          <li className="col-12 text-white">
+                            <span className="font-weight-bold mr-2">
+                              Descripcion:
+                            </span>
+                            {punto.descripcion}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </Popup>
               </Marker>
             ))}
         </MapContainer>
