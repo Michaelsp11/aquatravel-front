@@ -12,17 +12,15 @@ export const Inicial = () => {
     const { latitude, longitude } = posicion.coords;
     setCoordenadas([latitude, longitude]);
   });
-  useEffect(() => {
-    cargarPuntos();
-  }, [cargarPuntos]);
-  const cargarPuntos = useCallback(async () => {
+
+  const cargarPuntos = async () => {
     const resp = await fetch(`${process.env.REACT_APP_URL_API}puntos/listado`);
     if (!resp.ok) {
       return;
     }
     const listadoPuntosAPI = await resp.json();
     setListadoPuntos(listadoPuntosAPI);
-  }, []);
+  };
   const createIcon = (url) => {
     return new L.Icon({
       iconUrl: url,
@@ -32,6 +30,9 @@ export const Inicial = () => {
   const getIcon = () => {
     return createIcon("./icon-beach.png");
   };
+  useEffect(() => {
+    cargarPuntos();
+  }, []);
   return (
     <main className="contenedor-mapa">
       <div className="mapa w-100 position-relative">

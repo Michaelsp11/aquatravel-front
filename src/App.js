@@ -15,12 +15,10 @@ import { Logout } from "./componentes/Logout";
 import { PaginaNoEncontrada } from "./pages/PaginaNoEncontrada";
 import { AuthContextProvider } from "./contextos/AuthContextProvider";
 import { CrearPunto } from "./pages/CrearPunto";
-import { FormularioPuntuacion } from "./componentes/FormularioPuntuacion";
 import { UsuarioConfirmado } from "./pages/UsuarioConfirmado";
 import { VerificarUsuario } from "./pages/VerificarUsuario";
 import { UsuarioRegistrado } from "./componentes/UsuarioRegistrado";
 import { ConfirmarUsuario } from "./componentes/ConfirmarUsuario";
-import { PaginaSitio } from "./pages/PaginaSitio";
 import { Solicitudes } from "./pages/Solicitudes";
 function App() {
   return (
@@ -68,13 +66,6 @@ function App() {
           <Route path="/" exact>
             <Redirect to="/inicio" />
           </Route>
-          <Route path="/formularioPuntuacion" exact>
-            <FormularioPuntuacion />
-          </Route>
-          <Route path="/sitio">
-            <PaginaSitio />
-          </Route>
-
           <Route path="**" exact>
             <PaginaNoEncontrada />
           </Route>

@@ -31,10 +31,6 @@ body {
   color: var(--color-principal);
   text-decoration: none;
 }
-.logo-img {
-  min-width: 40px;
-  max-width: 100%;
-}
 .color-page {
   color: var(--color-principal);
 }
@@ -98,10 +94,10 @@ body {
   position: absolute;
   padding-top: 15px;
   padding-bottom: 15px;
-  top: 99.99%;
+  top: 95%;
   right: 0;
   background-color: #fff;
-  border: 1px solid var(--color-principal);
+  border-bottom: 1px solid var(--color-principal);
   border-top: 0;
   border-right: 0;
 }
@@ -140,6 +136,8 @@ body {
 }
 .titulo {
   font-family: monospace;
+}
+.titulo-about {
   font-size: 43px;
 }
 .btn-crearPunto {
@@ -165,53 +163,10 @@ body {
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
+  line-height: 214px;
 }
 .fundador img {
-  width: auto;
-  height: 140%;
-  margin-left: 0px;
-  margin-top: 25px;
-}
-.fundador1 {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.fundador1 img {
-  width: auto;
-  height: 100%;
-  margin-left: 25px;
-}
-.fundador2 {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.fundador2 img {
-  width: auto;
-  height: 90%;
-  margin-left: 10px;
-  margin-top: 15px;
-}
-.fundador3 {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.fundador3 img {
-  width: auto;
-  height: 110%;
-  margin-left: 0px;
-  margin-top: -5px;
+  width: 100%;
 }
 .both {
   background-color: var(--color-blanco);
@@ -225,14 +180,6 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-}
-.circulo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.circulo.activo {
-  background-color: orange;
 }
 .imagenlugar {
   margin-top: 4px;
