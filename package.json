@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^4.6.0",
     "bootstrap4": "^0.0.1-security",
+    "dotenv": "^16.4.5",
     "eslint-config-prettier": "^8.3.0",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.7.1",
@@ -19,7 +20,7 @@
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
